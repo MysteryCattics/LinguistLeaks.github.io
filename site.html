@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>АРХИВ 12 школы</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      background: #111;
+      color: #f5f5f5;
+    }
+    header {
+      padding: 24px 16px;
+      text-align: center;
+      background: #1a1a1a;
+      border-bottom: 1px solid #2a2a2a;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+      letter-spacing: 0.5px;
+    }
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+    .card {
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+    }
+    .media {
+      aspect-ratio: 16 / 9;
+      background: #000;
+    }
+    video {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 16px;
+      border-top: 1px solid #2a2a2a;
+    }
+    .meta {
+      font-size: 0.95rem;
+      color: #ddd;
+    }
+    .btn {
+      appearance: none;
+      border: none;
+      cursor: pointer;
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #111;
+      background: #ffd84d;
+      box-shadow: 0 6px 12px rgba(255,216,77,0.25);
+      transition: transform 0.08s ease, box-shadow 0.2s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn:active { transform: translateY(0); }
+    .conditions {
+      margin-top: 20px;
+      padding: 16px;
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      color: #bbb;
+      line-height: 1.4;
+    }
+    .conditions h2 {
+      margin-top: 0;
+      font-size: 1.1rem;
+      color: #ffd84d;
+    }
+    .conditions ul {
+      padding-left: 20px;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>АРХИВ 12 школы</h1>
+  </header>
+
+  <main>
+    <div class="card">
+      <div class="media">
+        <!-- Видео-файл должен лежать в той же папке -->
+        <video id="schoolVideo" controls preload="metadata" poster="poster.jpg">
+          <source src="video-9klass.mp4" type="video/mp4" />
+          Ваш браузер не поддерживает воспроизведение видео.
+        </video>
+      </div>
+      <div class="footer">
+        <div class="meta">
+          Видео: 9-й клас. Формат: MP4
+        </div>
+        <a class="btn" href="video-9klass.mp4" download>Скачать</a>
+      </div>
+    </div>
+
+    <!-- Блок с условиями -->
+    <div class="conditions">
+      <h2>Умови використання</h2>
+      <ul>
+        <li>Файл призначений лише для внутрішнього архіву школи №12.</li>
+        <li>Заборонено поширювати матеріали без дозволу адміністрації.</li>
+        <li>Використання допускається лише в освітніх цілях.</li>
+        <li>Будь-яке комерційне використання заборонено.</li>
+      </ul>
+    </div>
+  </main>
+</body>
+</html>

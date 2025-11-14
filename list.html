@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>АРХИВ 12 школы</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      background: #111;
+      color: #f5f5f5;
+    }
+    header {
+      padding: 24px 16px;
+      text-align: center;
+      background: #1a1a1a;
+      border-bottom: 1px solid #2a2a2a;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+      letter-spacing: 0.5px;
+    }
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+    .archives, .conditions, .hidden-doc {
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+      margin-bottom: 20px;
+    }
+    .archives h2, .conditions h2, .hidden-doc h2 {
+      margin-top: 0;
+      font-size: 1.3rem;
+      color: #ffd84d;
+    }
+    .archives ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .archives li {
+      margin: 10px 0;
+    }
+    .archives a {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 8px;
+      background: #ffd84d;
+      color: #111;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
+    .archives a:hover {
+      background: #e6c43f;
+    }
+    .photo-block {
+      margin-top: 15px;
+      text-align: center;
+      display: none; /* скрыто по умолчанию */
+    }
+    .photo-block img {
+      max-width: 100%;
+      border-radius: 8px;
+      border: 2px solid #333;
+    }
+    .hidden-doc {
+      background: #222;
+      border: 1px solid #333;
+      font-size: 0.95rem;
+      color: #ddd;
+    }
+    .hidden-doc .note {
+      margin-top: 10px;
+      font-size: 0.85rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>АРХИВ 12 школы</h1>
+  </header>
+
+  <main>
+    <!-- Список архивов -->
+    <div class="archives">
+      <h2>Список архивов</h2>
+      <ul>
+        <li><a href="#" id="showPhoto">Страшные видео</a></li>
+        <li><a href="#">Обычные видео</a></li>
+        <li><a href="#">Видео для взрослых</a></li>
+        <li><a href="#HiddenDocs">Скрытые документы</a></li>
+        <li><a href="#">Приступления</a></li>
+      </ul>
+      <!-- Фото блок -->
+      <div class="photo-block" id="photoBlock">
+        <img src="photo.jpg" alt="Страшное фото">
+      </div>
+    </div>
+
+    <!-- Блок с условиями -->
+    <div class="conditions">
+      <h2>Умови використання</h2>
+      <ul>
+        <li>Файл призначений лише для внутрішнього архіву школи №12.</li>
+        <li>Заборонено поширювати матеріали без дозволу адміністрації.</li>
+        <li>Використання допускається лише в освітніх цілях.</li>
+        <li>Будь-яке комерційне використання заборонено.</li>
+      </ul>
+    </div>
+
+    <!-- Скрытый документ -->
+    <div class="hidden-doc" id="HiddenDocs">
+      <h2>Скрытий документ</h2>
+      <p><strong>Тема:</strong> Корупція за хороші оцінки</p>
+      <p><strong>Заклад:</strong> Ліцей «Лінгвіст», вул. Заріфи Алієвої, 64</p>
+      <p class="note">Цей документ є частиною внутрішнього архіву. Використання допускається лише в освітніх цілях.</p>
+    </div>
+  </main>
+
+  <script>
+    // при клике на "Страшные видео" показываем фото
+    document.getElementById('showPhoto').addEventListener('click', function(e) {
+      e.preventDefault(); // отменяем переход по ссылке
+      document.getElementById('photoBlock').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
